@@ -1,0 +1,93 @@
+/* 1. Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
+/* 2. Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 15%);
+}
+
+/* 3. Form Styling */
+form .form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: hsl(185, 100%, 40%);
+  outline: none;
+}
+
+button {
+  background-color: hsl(185, 100%, 40%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+  background-color: hsl(185, 100%, 35%);
+}
+
+/* 4. Error and Success */
+.error {
+  color: hsl(0, 100%, 50%);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  min-height: 1em;
+}
+
+#successMessage {
+  margin-top: 1rem;
+  background-color: hsl(145, 63%, 49%);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
