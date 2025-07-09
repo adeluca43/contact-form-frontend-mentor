@@ -1,49 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Contact form</title>
 
-  <main>
-  <h1>Contact Us</h1>
-  <form id="contactForm" novalidate>
-    <div class="form-group">
-      <label for="name">Name <span aria-hidden="true">*</span></label>
-      <input type="text" id="name" name="name" required />
-      <p class="error" id="nameError" aria-live="polite"></p>
-    </div>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Contact Us</h1>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName"
+              >First Name <span aria-hidden="true">*</span></label
+            >
+            <input type="text" id="firstName" name="firstName" required />
+            <p class="error" id="firstNameError" aria-live="polite"></p>
+          </div>
 
-    <div class="form-group">
-      <label for="email">Email Address <span aria-hidden="true">*</span></label>
-      <input type="email" id="email" name="email" required />
-      <p class="error" id="emailError" aria-live="polite"></p>
-    </div>
+          <div class="form-group">
+            <label for="lastName"
+              >Last Name <span aria-hidden="true">*</span></label
+            >
+            <input type="text" id="lastName" name="lastName" required />
+            <p class="error" id="lastNameError" aria-live="polite"></p>
+          </div>
+        </div>
 
-    <div class="form-group">
-      <label for="message">Message <span aria-hidden="true">*</span></label>
-      <textarea id="message" name="message" required></textarea>
-      <p class="error" id="messageError" aria-live="polite"></p>
-    </div>
+        <div class="form-group">
+          <label for="email"
+            >Email Address <span aria-hidden="true">*</span></label
+          >
+          <input type="email" id="email" name="email" required />
+          <p class="error" id="emailError" aria-live="polite"></p>
+        </div>
 
-    <button type="submit">Submit</button>
+        <div class="form-group">
+          <p>Query Type <span aria-hidden="true">*</span></p>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="queryType" value="general" required />
+              <span>General Enquiry</span>
+            </label>
+            <label>
+              <input type="radio" name="queryType" value="support" required />
+              <span>Support Request</span>
+            </label>
+          </div>
 
-    <div id="successMessage" role="alert" aria-live="assertive" hidden>
-      Thank you! Your message has been sent.
-    </div>
-  </form>
-</main>
+          <p class="error" id="queryTypeError" aria-live="polite"></p>
+        </div>
 
-</body>
+        <div class="form-group">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required></textarea>
+          <p class="error" id="messageError" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="consent" name="consent" required />
+    <label for="consent">
+      I consent to being contacted by the team <span aria-hidden="true">*</span>
+    </label>
+  </div>
+  <p class="error" id="consentError" aria-live="polite"></p>
+</div>
+
+
+
+        <button type="submit">Submit</button>
+
+        <div id="successMessage" role="alert" aria-live="assertive" hidden>
+          Thank you! Your message has been sent.
+        </div>
+      </form>
+    </main>
+  </body>
 </html>

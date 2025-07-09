@@ -1,7 +1,5 @@
-/* 1. Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
-/* 2. Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +8,7 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: hsl(0, 0%, 98%);
+  background-color: hsl(148, 38%, 91%);
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -24,23 +22,23 @@ main {
   border-radius: 0.75rem;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   color: hsl(0, 0%, 15%);
+  font-weight: 600;
 }
 
-/* 3. Form Styling */
 form .form-group {
   margin-bottom: 1rem;
 }
 
 label {
   display: block;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
@@ -60,22 +58,23 @@ textarea:focus {
 }
 
 button {
-  background-color: hsl(185, 100%, 40%);
+  background-color: hsl(169, 82%, 27%);
   color: white;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1rem;
 }
 
 button:hover,
 button:focus {
-  background-color: hsl(185, 100%, 35%);
+  background-color: hsl(169, 82%, 20%);
 }
 
-/* 4. Error and Success */
 .error {
   color: hsl(0, 100%, 50%);
   font-size: 0.9rem;
@@ -91,3 +90,73 @@ button:focus {
   border-radius: 0.5rem;
   text-align: center;
 }
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row .form-group {
+  flex: 1;
+  min-width: 100%;
+}
+
+@media (min-width: 600px) {
+  .form-row .form-group {
+    min-width: 0;
+  }
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  flex: 1;
+  justify-content: flex-start;
+  font-weight: 400;
+  gap: 0.75rem;
+}
+
+.radio-group input[type="radio"] {
+  margin: 0;
+  accent-color: hsl(169, 82%, 27%);
+  transform: scale(1.2);
+}
+.radio-group label span {
+  white-space: nowrap;
+}
+
+
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 0.75rem;
+  width: fit-content;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  transform: scale(1.1);
+  accent-color: hsl(169, 82%, 27%);
+}
+
+.checkbox-wrapper label {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  cursor: pointer;
+  flex: 1;
+  white-space: nowrap;
+}
+
